@@ -1,6 +1,6 @@
 let hoverElements = document.querySelectorAll(".onHover");
 let audio = document.createElement("audio");
-audio.src = "/select.wav"; // Yes?
+audio.src = "/sounds/select.wav"; // Yes?
 audio.loop = true; // ez fix
 
 document.body.appendChild(audio);
