@@ -3,38 +3,48 @@
 <head>
       <!-- :3 -->
 
-	<meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>bunny</title>
 
-  <meta name="title" content="V.I.I Enterprises" />
-  <meta name="description" content="The bunny is waiting." />
+  <meta name="title" content="v.i.i Enterprises" />
+  <meta name="description" content="Not Found"/>
 
   <!-- opengraph//facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://viienterprises.oops.wtf/" />
   <meta property="og:title" content="v.i.i Enterprises" />
-  <meta property="og:description" content="The bunny is waiting." />
-  <meta property="og:image" content="https://viienterprises.oops.wtf/giHun.png" />
+  <meta property="og:description" content="Not Found"/>
+  <meta property="og:image" content="https://viienterprises.oops.wtf/giHun404.png" />
 
   <!-- xitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://viienterprises.oops.wtf/" />
   <meta property="twitter:title" content="v.i.i Enterprises" />
-  <meta property="twitter:description" content="The bunny is waiting" />
-  <meta property="twitter:image" content="https://viienterprises.oops.wtf/giHun.png" />
+  <meta property="twitter:description" content="Not Found" />
+  <meta property="twitter:image" content="https://viienterprises.oops.wtf/giHun404.png" />
 
   <link rel="icon" type="image/x-icon" href="/bunny.ico">
 
   <style>
     body {background-color: black; color: white;}
 
-    img:hover {
+    p {font-family: 'Courier New', Courier, monospace}
+
+    .onHover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 0.1s;
 
   /* When the animation is finished, start again */
   animation-iteration-count: infinite;
 }
+
+  .anchorCorner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: inline-block;    
+  }
 
   @keyframes shake {
     0% {transform: translate(1px, 1px)};
@@ -48,7 +58,12 @@
 </head>
   <body>
 
-    <p>No!</p>
+    <p style="text-align: center;"><img src="/notFound.gif" alt="Wrong!"></p>
+    <p style="text-align: center;">404 - NOT FOUND</p>
+
+    <a href="/" class ="anchorCorner">
+      <img src="goBack.gif" alt="Go Home">
+    </a>
 
   </body>
 </html>
