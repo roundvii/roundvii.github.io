@@ -1,12 +1,19 @@
-let specific = document.querySelectorAll(".onHover");
+let hoverElements = document.querySelectorAll(".onHover");
 let audio = document.createElement("audio");
-audio.src = "https://viienterprises.oops.wtf/select.wav";
+audio.src = "/select.wav"; // Yes?
+audio.loop = true; // ez fix
+
 document.body.appendChild(audio);
 
-specific.onmouseover = () => {
-  audio.play();
-}
-specific.onmouseout = () => {
-    audio.pause();
-    audio.currentTime = 0;
-}
+hoverElements.forEach((hoverElement) => {
+    hoverElement.onmouseover = () => { // hover
+        audio.play();
+    }
+
+    hoverElement.onmouseout = () => { // exit
+        audio.pause();
+        audio.currentTime = 0;
+    }    
+});
+
+//pojfkmvouseljd,fmboujsdvuj

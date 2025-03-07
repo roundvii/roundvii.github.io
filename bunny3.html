@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" lang="en" oncontextmenu="return false">
 <head>
       <!-- :3 -->
 
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<title>bunny</title>
 
   <meta name="title" content="v.i.i Enterprises" />
@@ -29,70 +28,92 @@
 
   <style>
     body {background-color: black; color: white;}
+    
+    p {font-family: 'Courier New', Courier, monospace}
 
-    img:hover {
-  /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 0.1s;
+    button {
+      background-color: #fff;
+      
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
 
-  /* When the animation is finished, start again */
-  animation-iteration-count: infinite;
-}
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
 
-  @keyframes shake {
-    0% {transform: translate(1px, 1px)};
-    10% {transform: translate(0px, 1px)};
-    20% {transform: translate(1px, -1px)};
-    30% {transform: translate(-1px, 0px)};
+    button:hover {
+      background-color: #d2d2d2;
+    }
+
+
+    .anchorCorner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: inline-block;    
   }
+
+  .container {
+  overflow: hidden;
+}
 
   </style>
 
 </head>
-  <body>
+  <body oncontextmenu="return false">
 
-    <p style="text-align: center;">
-    
-    <a href="https://youtu.be/XErOjvProc4"> <img class="onHover" src="/bunny.png" alt="vii's Funny Bunny Video!"></a>
+    <div class="container">
+      <div class="sliding-background"></div>
+    </div>
 
-    <a href="https://discord.gg/gxmBpKPQhv" target="_blank" rel="noopener noreferrer"> <img id="hover2" src="/bunny2.png" alt="Official Discord"></a>
-
-    <a href="https://discord.gg/gxmBpKPQhv" target="_blank" rel="noopener noreferrer"> <img id="hover2" src="/bunny3.png" alt="Official Discord"></a>
-
+  <p style="text-align: center;">
+    <img src="/bunny3.png" alt="Playable Audio Below">
   </p>
 
-  <audio id="snd_hover" src="/select.wav" preload="auto" loop></audio>
+  <p style="text-align: center;">Playable Audio Below</p>
+  <p style="text-align: center;"><img src="/lookDown.gif" alt="Look Down"></p>
+
+  <p style="text-align: center;"><button id="soundButton" oncontextmenu="return false" onclick="toggleAudio()" type="button">Play Playable Audio</button></p>
+
+  
+
+
+  <audio id="24Songs" preload="auto" loop>
+    <source src="/24Songs.wav" type="audio/wav">
+    You can't play this song
+  </audio>
+
+
+  <a href="/" class ="anchorCorner">
+    <img src="goBack.gif" alt="Go Home">
+  </a>
+
 
   <script>
-  
-    const picture = document.getElementById("hover");
-    const picture2 = document.getElementById("hover2");
 
-    const sound = document.getElementById("snd_hover");
+    var sound =  document.getElementById("24Songs");
+    var button = document.getElementById("soundButton");
 
-    sound.load();
-
-    picture.onmouseenter = function()
+    function toggleAudio()
     {
-      sound.play();
-    }
-
-    picture.onmouseleave = function()
-    {
-      sound.pause();
-    }
-
-    picture2.onmouseenter = function()
-    {
-      sound.play();
-    }
-
-    picture2.onmouseleave = function()
-    {
-      sound.pause();
+      if (sound.paused)
+      {
+        button.textContent = "Stop Playable Audio";
+        sound.play();
+      }
+      else
+      {
+        button.textContent = "Play Playable Audio";
+        sound.pause();
+        sound.currentTime = 0;
+      }
     }
 
   </script>
-
 
   </body>
 </html>

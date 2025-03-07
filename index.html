@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+<head>
+      <!-- :3 -->
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>bunny</title>
+
+  <meta name="title" content="v.i.i Enterprises" />
+  <meta name="description" content="The bunny is waiting." />
+
+  <!-- opengraph/facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://viienterprises.oops.wtf/" />
+  <meta property="og:title" content="v.i.i Enterprises" />
+  <meta property="og:description" content="The bunny is waiting." />
+  <meta property="og:image" content="https://viienterprises.oops.wtf/giHun.png" />
+
+  <!-- xitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://viienterprises.oops.wtf/" />
+  <meta property="twitter:title" content="v.i.i Enterprises" />
+  <meta property="twitter:description" content="The bunny is waiting" />
+  <meta property="twitter:image" content="https://viienterprises.oops.wtf/giHun.png" />
+
+  <link rel="icon" type="image/x-icon" href="/bunny.ico">
+
+  <style>
+    body {background-color: black; color: white;}
+
+    
+    p {font-family: 'Courier New', Courier, monospace}
+    h6 {font-family: 'Courier New', Courier, monospace}
+
+    img:hover {
+      /* Start the shake animation and make the animation last for 0.5 seconds */
+      animation: shake 0.1s;
+
+      /* When the animation is finished, start again */
+      animation-iteration-count: infinite;
+    }
+
+      @keyframes shake {
+        0% {transform: translate(1px, 1px)};
+        10% {transform: translate(0px, 1px)};
+        20% {transform: translate(1px, -1px)};
+        30% {transform: translate(-1px, 0px)};
+      }
+
+
+      .anchorCorner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: inline-block;    
+  }
+
+  </style>
+
+</head>
+  <body oncontextmenu="return false">
+
+    <p style="text-align: center;">give V.I.I Enterprises access to your autoplay function</p>
+    <h6 style="text-align: center;">This site contains components that will require autoplay for a better experience. You can automatically enable it by clicking below.</h6>
+    <h6 style="text-align: center;">This site uses cookies to automatically redirect you to the home page once this process is complete. Thank you for your understanding and cooperation. Click the damn button already.</h6>
+    <p style="text-align: center;"><a href="/home.html"><img src="/clickMe.gif" width="75" height="75"></a></p>
+
+  </body>
+
+  <script>
+    if (!document.cookie.includes('visited=true')) {
+      const expiryDate = new Date();
+      expiryDate.setFullYear(expiryDate.getFullYear() + 10);
+      document.cookie = `visited=true; expires=${expiryDate.toUTCString()}; path=/`;
+    } else {
+      window.location.href = '/home.html';
+    }
+    </script>
+</html>
